@@ -1,6 +1,7 @@
 # chat_app
 
 A new Flutter project.
+Some simple Chat App use a Fire Base Build with Flutter dart Language
 
 ## Getting Started
 
