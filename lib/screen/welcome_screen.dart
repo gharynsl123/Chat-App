@@ -1,3 +1,5 @@
+import 'package:chat_app/screen/login_screen.dart';
+import 'package:chat_app/screen/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -46,12 +48,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 color: Colors.lightBlueAccent,
                 borderRadius: BorderRadius.circular(30),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, LoginScreen.id);
+                  },
+                  // builder: (context) => const RegisterScreen()
                   minWidth: 200,
                   height: 42,
                   child: const Text(
                     'Sign In',
-                    style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
@@ -63,12 +71,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(30),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, RegisterScreen.id);
+                  },
                   minWidth: 200,
                   height: 42,
                   child: const Text(
                     'Sign Up',
-                    style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
